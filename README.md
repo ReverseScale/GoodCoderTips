@@ -195,4 +195,4 @@ var sumUsingClosure: (Int, Int) -> (Int) = { $0 + $1 }
 sumUsingClosure(5, 6) // 11
 ```
 
-原文：10 Tips to become a better Swift Developer
+原文：《10 Tips to become a better Swift Developer》
