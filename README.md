@@ -1,6 +1,6 @@
 # 10 Tips to Keep Your Swift Code Simple
 
-![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/17744842.jpg)
+![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/3847180.jpg)
 
 [EN](#Requirements) | [中文](#中文说明)
 
@@ -220,6 +220,8 @@ sumUsingClosure(5, 6) // 11
 # 中文说明
 
 让你的 Swift 代码简洁的 10 个 Tips
+
+![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/3847180.jpg)
 
 ## 🎨 测试 UI 什么样子？
 |1.列表页 |2.展示页 |3.展示页 |4.展示页 |
