@@ -1,4 +1,6 @@
-10 Tips to Keep Your Swift Code Simple
+# 10 Tips to Keep Your Swift Code Simple
+
+![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/17744842.jpg)
 
 [EN](#Requirements) | [中文](#中文说明)
 
