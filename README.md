@@ -2,10 +2,10 @@
 让你的 Swift 代码简洁的 10 个 Tips
 
 
-| 名称 |1.列表页 |2.展示页 |3.展示页 |4.展示页 |
-| ------------- | ------------- | ------------- | ------------- | ------------- | 
-| 截图 | ![](http://og1yl0w9z.bkt.clouddn.com/17-9-20/88060087.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/17-9-20/37650350.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/17-9-20/4629850.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/17-9-20/45289575.jpg) |
-| 描述 | 通过 storyboard 搭建基本框架 | Enum 类型安全 | Nil Coalescing | 闭包 vs 方法 | 
+|1.列表页 |2.展示页 |3.展示页 |4.展示页 |
+| ------------- | ------------- | ------------- | ------------- | 
+| ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/46526620.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/12840369.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/14277353.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/167775.jpg) |
+| 通过 storyboard 搭建基本框架 | Enum 类型安全 | Nil Coalescing | 闭包 vs 方法 | 
 
 
 ### 1.Extension
