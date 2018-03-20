@@ -9,6 +9,12 @@
 | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/46526620.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/12840369.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/14277353.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/167775.jpg) |
 | Building a basic framework via storyboard | Enum type safety | Nil Coalescing | Closure vs. Method |
 
+## 🤖 Requirements
+
+* iOS 9.0+
+* Xcode 9.0+
+* Swift
+
 ## 🛠 Configuration
 
 ### 1.Extension
@@ -218,6 +224,12 @@ sumUsingClosure(5, 6) // 11
 | ------------- | ------------- | ------------- | ------------- | 
 | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/46526620.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/12840369.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/14277353.jpg) | ![](http://og1yl0w9z.bkt.clouddn.com/18-3-20/167775.jpg) |
 | 通过 storyboard 搭建基本框架 | Enum 类型安全 | Nil Coalescing | 闭包 vs 方法 | 
+
+## 🤖 要求
+
+* iOS 9.0+
+* Xcode 9.0+
+* Swift 
 
 ## 🛠 配置
 ### 1.Extension
