@@ -21,13 +21,16 @@
 
 ### 1.Extension
 Example: Square a number
-```
+
+```Swift
 // Okay Version
 func square(x: Int) -> Int { return x * x }
 var squaredOFFive = square(x: 5)
 square(x:squaredOFFive) // 625
 ```
-The above code produces the squaredOFFive intermediate variable, which is not necessary. We can use Extension to add a squared method to Int. The advantage of this is that chaining can be performed later.```
+The above code produces the squaredOFFive intermediate variable, which is not necessary. We can use Extension to add a squared method to Int. The advantage of this is that chaining can be performed later.
+
+```Swift
 // Better Version
 extension Int { 
  var squared: Int { return self * self }
@@ -35,10 +38,11 @@ extension Int {
 5.squared // 25
 5.squared.squared // 625
 ```
+
 ### 2.Generics
 
 Example: Output all the elements in an array.
-```
+```Swift
 // Bad Code
 var stringArray = ["Bob", "Bobby", "SangJoon"]
 var intArray = [1, 3, 4, 5, 6]
@@ -47,30 +51,37 @@ func printStringArray(a: [String]) { for s in a { print(s) } }
 func printIntArray(a: [Int]) { for i in a { print(i) } }
 func printDoubleArray(a: [Double]) {for d in a { print(d) } }
 ```
+
 The above example defines a lot of repetitive methods, if you use generics to implement this feature, the entire world will be refreshed.
-```
+
+```Swift
 // Awesome Code
 func printElementFromArray<T>(a: [T]) {
  for element in a { print(element) } }
 ```
+
 ### 3.for cycle vs While cycle
 
 Example: Print "count" 5 times
-```
+
+```Swift
 // Okay Code
 var i = 0
 while 5 > i {
 print("Count")
 i += 1 }
 ```
+
 In order to control the number of while loops, a variable i has to be defined here. The for loop is more concise.
-```
+
+```Swift
 // Better Code
 for _ in 1...5 { print("Count") }
 ```
 ### 4.Optional Unwrapping
 Example: gaurd let vs if let
-```
+
+```Swift
 var myUsername: Double?
 var myPassword: Double?
 // Hideous Code
@@ -83,7 +94,8 @@ func userLogIn() {
 }
 ```
 Every time you see this nested if let statement is a headache, if you use guard let can make the code more concise.
-```
+
+```Swift
 // Pretty Code
 func userLogIn() {
  guard let username = myUsername, let password = myPassword 
@@ -93,7 +105,7 @@ func userLogIn() {
 ### 5. Calculate Attribute vs Method
 
 Example: Calculate the diameter of a circle:
-```
+```Swift
 // 💩 Code
 func getDiameter(radius: Double) -> Double { return radius * 2}
 func getRadius(diameter: Double) -> Double { return diameter / 2}
@@ -102,8 +114,10 @@ getDiameter(radius: 10) // return 20
 getRadius(diameter: 200) // return 100
 getRadius(diameter: 600) // return 300
 ```
+
 This code creates two methods that convert each other. In fact, we can associate them by calculating properties.
-```
+
+```Swift
 // Good Code
 var radius: Double = 10
 
@@ -122,7 +136,8 @@ The radius and diameter are now related.
 ### 6.Enum type security
 
 Example: Ticket sales
-```
+
+```Swift
 // Simply Bad
 
 switch person {
@@ -132,8 +147,10 @@ switch person {
  default: print("You alive, bruh?")
 }
 ```
+
 Here we judge the content of the person (string), but this is a very dangerous practice, because we can't guarantee that the string in the switch case is written correctly, and xcode will not perform code completion.
-```
+
+```Swift
 // Beautiful Code
 enum People { case adult, child, senior }
 var person = People.adult
@@ -148,7 +165,7 @@ Use enum to find your errors during compilation.
 ### 7.Nil Coalescing
 
 Example: The user selects the theme color of twitter:
-```
+```Swift
 // Long Code
 
 var userChosenColor: String?
@@ -158,14 +175,18 @@ var colorToUse = ""
 if let Color = userChosenColor { colorToUse = Color } else
  { colorToUse = defaultColor }
 ```
+
 This code is too long. Let's simplify it.
-```
+
+```Swift
 // Concise AF 
 var colorToUse = userChosenColor ?? defaultColor
 If userChosenColor is nil, the userChosenColor ?? defaultColor expression returns defaultColor, otherwise it returns userChosenColor.
 ```
+
 ### 8.Conditional Coalescing
-```
+
+```Swift
 // Simply Verbose
 var currentHeight = 185
 var hasSpikyHair = true
@@ -176,13 +197,15 @@ if hasSpikyHair { finalHeight = currentHeight + 5}
 ```
 
 This code is too long, we can use the trinocular operator to simplify this code.
-```
+
+```Swift
 finalHeight = currentHeight + (hasSpikyHair ? 5: 0)
 ```
 ### 9.Functional Programming
 
 Example: Get an even number:
-```
+
+```Swift
 var newEvens = [Int]()
 
 for i in 1...10 {
@@ -192,7 +215,8 @@ for i in 1...10 {
 print(newEvens) // [2, 4, 6, 8, 10]
 ```
 Looking at this code, we need to spend the energy to analyze this for loop. The more direct operation is as follows.
-```
+
+```Swift
 // Declarative 😎
 var evens = Array(1...10).filter { $0 % 2 == 0 }
 print(evens) // [2, 4, 6, 8, 10]
@@ -200,13 +224,13 @@ print(evens) // [2, 4, 6, 8, 10]
 This code can clearly show our intentions.
 
 ### 10.Closure vs method
-```
+```Swift
 // Normal Function
 func sum(x: Int, y: Int) -> Int { return x + y }
 var result = sum(x: 5, y: 6) // 11
 ```
 Sometimes we do not need to use the method name and parameter name of the function. We only want to use the function function. At this time, we can use the closure instead.
-```
+```Swift
 // Closure
 var sumUsingClosure: (Int, Int) -> (Int) = { $0 + $1 }
 sumUsingClosure(5, 6) // 11
